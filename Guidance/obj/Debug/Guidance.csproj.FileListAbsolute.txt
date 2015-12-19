@@ -12,3 +12,16 @@ c:\users\administrator\documents\visual studio 2013\Projects\Guidance\Guidance\b
 c:\users\administrator\documents\visual studio 2013\Projects\Guidance\Guidance\obj\Debug\Guidance.csprojResolveAssemblyReference.cache
 c:\users\administrator\documents\visual studio 2013\Projects\Guidance\Guidance\obj\Debug\Guidance.dll
 c:\users\administrator\documents\visual studio 2013\Projects\Guidance\Guidance\obj\Debug\Guidance.pdb
+D:\Visual Studio 2015\Projects\Guidance\Guidance\bin\Guidance.dll.config
+D:\Visual Studio 2015\Projects\Guidance\Guidance\bin\Guidance.dll
+D:\Visual Studio 2015\Projects\Guidance\Guidance\bin\Guidance.pdb
+D:\Visual Studio 2015\Projects\Guidance\Guidance\bin\System.Net.Http.Formatting.dll
+D:\Visual Studio 2015\Projects\Guidance\Guidance\bin\System.Web.Http.dll
+D:\Visual Studio 2015\Projects\Guidance\Guidance\bin\System.Web.Http.WebHost.dll
+D:\Visual Studio 2015\Projects\Guidance\Guidance\bin\System.Net.Http.Formatting.xml
+D:\Visual Studio 2015\Projects\Guidance\Guidance\bin\System.Web.Http.xml
+D:\Visual Studio 2015\Projects\Guidance\Guidance\bin\System.Web.Http.WebHost.xml
+D:\Visual Studio 2015\Projects\Guidance\Guidance\bin\Newtonsoft.Json.xml
+D:\Visual Studio 2015\Projects\Guidance\Guidance\obj\Debug\Guidance.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2015\Projects\Guidance\Guidance\obj\Debug\Guidance.dll
+D:\Visual Studio 2015\Projects\Guidance\Guidance\obj\Debug\Guidance.pdb

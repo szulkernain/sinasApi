@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
-using Guidance.Helpers;
+using SinasApi.Helpers;
 
-namespace Guidance.Controllers
+namespace SinasApi.Controllers
 {
     public class BooksController : ApiController
     {
@@ -13,9 +13,9 @@ namespace Guidance.Controllers
         }
 
         // GET: api/Books/5
-        public string Get(int id)
+        public Book Get(int id)
         {
-            return "value";
+            return new DBHelper().GetBookDetails(id);
         }
 
         // POST: api/Books

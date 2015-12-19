@@ -1,0 +1,13 @@
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\bin\Guidance.dll.config
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\bin\Guidance.dll
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\bin\Guidance.pdb
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\bin\System.Net.Http.Formatting.dll
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\bin\System.Web.Http.dll
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\bin\System.Web.Http.WebHost.dll
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\bin\Newtonsoft.Json.xml
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\bin\System.Net.Http.Formatting.xml
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\bin\System.Web.Http.xml
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\bin\System.Web.Http.WebHost.xml
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\obj\Debug\SinasApi.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\obj\Debug\Guidance.dll
+D:\Visual Studio 2015\Projects\SinasApi\Guidance\obj\Debug\Guidance.pdb

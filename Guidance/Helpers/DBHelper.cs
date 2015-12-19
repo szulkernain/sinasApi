@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace Guidance.Helpers
+namespace SinasApi.Helpers
 {
     public class DBHelper
     {
@@ -12,7 +12,7 @@ namespace Guidance.Helpers
 
         public DBHelper()
         {
-            connString = "Data Source=sinasserver.database.windows.net;Initial Catalog=TestDB;User ID=szulkernain;Password=Rahi4Rahi";
+            connString = System.Configuration.ConfigurationManager.ConnectionStrings["dbConnection"].ConnectionString;
         }
 
         public List<Book> GetBooks()
@@ -21,9 +21,14 @@ namespace Guidance.Helpers
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
-                using (SqlCommand cmd = new SqlCommand("select * from Books", conn))
+                using (SqlCommand cmd = new SqlCommand())
                 {
+                    cmd.Connection = conn;
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandText = "dbo.GetBooks";
+
                     conn.Open();
+
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.HasRows)
@@ -31,9 +36,9 @@ namespace Guidance.Helpers
                             while (reader.Read())
                             {
                                 Book book = new Book();
+                                book.Initial = reader.GetString(reader.GetOrdinal("Initial"));
                                 book.ISBN = reader.GetInt32(reader.GetOrdinal("ISBN"));
                                 book.Title = reader.GetString(reader.GetOrdinal("Title"));
-                                book.Description = reader.GetString(reader.GetOrdinal("Description"));
 
                                 listBooks.Add(book);
                             }
@@ -43,6 +48,37 @@ namespace Guidance.Helpers
             }
 
             return listBooks;
+        }
+
+        public Book GetBookDetails(int isbn)
+        {
+            Book book = new Book();
+
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandText = "dbo.GetBookDetails";
+                    cmd.Parameters.Add("@isbn", System.Data.SqlDbType.Int).Value = isbn;
+
+                    conn.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                            book.ISBN = isbn;
+                            book.Title = reader.GetString(reader.GetOrdinal("Title"));
+                            book.Description = reader.GetString(reader.GetOrdinal("Description"));
+                        }
+                    }
+                }
+            }
+
+            return book;
         }
     }
 }
